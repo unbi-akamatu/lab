@@ -1,0 +1,68 @@
+    :root{
+      --bg-base:#F9F5EE; --bg-alt:#F8F5F2; --bg-soft:#FAF9F7; --bg-dim:#EEE8DD;
+      --ink:#3C3C3C; --accent-1:#E9A8A3; --accent-2:#76B5A5; --line:#E0E0E0;
+      --radius-md:16px; --radius-lg:24px;
+      --shadow-sm:0 4px 12px rgba(0,0,0,.06); --shadow-md:0 6px 18px rgba(0,0,0,.08);
+      --space-xxl:240px; --space-xl:200px; --space-lg:160px; --space-md:120px; --space-sm:80px; --space-xs:40px;
+      --container-max:1100px; --container-pad:clamp(16px,10vw,120px);
+      --fs-hero:clamp(28px,3.2vw,40px); --fs-h1:clamp(24px,2.2vw,32px); --fs-h2:clamp(20px,1.8vw,24px);
+      --fs-body-lg:clamp(16px,1.4vw,18px); --fs-body:clamp(15px,1.2vw,16px); --fs-caption:clamp(13px,1vw,14px);
+    }
+    html{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    body{ margin:0; color:var(--ink); background:var(--bg-base);
+      font-family:"Zen Kaku Gothic New","Noto Sans JP",system-ui,-apple-system,sans-serif; }
+    .container{ max-width:var(--container-max); margin-inline:auto; padding-inline:var(--container-pad); }
+    section{ padding-block:var(--space-lg); } .center{text-align:center;}
+    .hero-copy{ font-weight:700; font-size:var(--fs-hero); line-height:1.4; letter-spacing:0; max-width:800px; margin:0 auto; }
+    .h1{ font-weight:700; font-size:var(--fs-h1); line-height:1.35; margin:0 0 24px; }
+    .h2{ font-family:"Zen Kaku Gothic Antique",sans-serif; font-weight:500; font-size:var(--fs-h2); line-height:1.45; margin:0 0 16px; letter-spacing:.005em;}
+    .body-lg{ font-weight:400; font-size:var(--fs-body-lg); line-height:1.9; letter-spacing:.015em; max-width:720px; margin:0 auto; }
+    .body{ font-weight:400; font-size:var(--fs-body); line-height:1.8; letter-spacing:.01em; }
+    .caption{ font-size:var(--fs-caption); line-height:1.6; letter-spacing:.01em; color:#7a7a7a; }
+    .statement{ font-family:"Zen Kaku Gothic Antique",sans-serif; font-weight:400; font-size:var(--fs-body-lg); line-height:2.0; letter-spacing:.01em; max-width:720px; margin:0 auto; }
+
+    .hero{ min-height:100svh; display:grid; place-items:center;
+      background:linear-gradient(to bottom,var(--bg-base),#F4E0B9); text-align:center; }
+    .hero .scroll-ind{ margin-top:40px; }
+
+    .subcopy p{ margin:0 0 24px; }
+    .concept .panel{ background:var(--bg-alt); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm);
+      padding:var(--space-xs); max-width:720px; margin:0 auto; }
+    .concept .panel p{ margin:0 0 32px; } .concept .panel p:last-child{ margin-bottom:0; }
+
+    .hscroll{ background:var(--bg-alt); padding-block:var(--space-lg);
+      overflow-x:auto; display:flex; gap:32px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+    .hscroll .card{ flex:0 0 80vw; height:70vh; min-height:420px; background:#fff; border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-md); display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:var(--space-xs); text-align:center; scroll-snap-align:center; will-change:transform; }
+    .hscroll .card .desc{ max-width:480px; }
+
+    .hscroll.activities{ background:var(--bg-soft); }
+    .hscroll.activities .card{ flex-basis:clamp(75vw,60vw,45vw); height:60vh; min-height:380px; }
+    .emoji{ font-size:32px; margin-bottom:16px; }
+
+    .who{ background:#F3EFE9; }
+    .who ul{ list-style:none; padding:0; margin:0 auto; max-width:720px; } .who li{ margin:0 0 16px; }
+
+    .gains{ background:var(--bg-soft); }
+    .gains .grid{ display:grid; gap:40px; max-width:1000px; margin:0 auto; grid-template-columns:1fr; }
+    @media (min-width:768px){ .gains .grid{ grid-template-columns:repeat(3,1fr); } }
+    .gains .grid h3{ margin:0 0 8px; font-family:"Zen Kaku Gothic Antique",sans-serif; font-weight:500; }
+
+    .message{ background:var(--bg-dim); }
+
+    .pricing{ background:var(--bg-alt); text-align:center; }
+    .pricing .highlight{ background:rgba(233,168,163,.15); padding:2px 6px; border-radius:4px; }
+    .pricing .caption{ margin-top:24px; display:block; color:#888; }
+
+    .cta .btns{ display:flex; gap:24px; justify-content:center; flex-wrap:wrap; }
+    .btn{ display:inline-block; text-decoration:none; padding:16px 28px; border-radius:var(--radius-md);
+      color:#fff; font-weight:500; font-size:var(--fs-body); box-shadow:var(--shadow-sm);
+      transition:transform .15s ease, opacity .2s ease; }
+    .btn:hover{ transform:translateY(-2px); }
+    .btn--salmon{ background:var(--accent-1); } .btn--mint{ background:var(--accent-2); }
+    .cta .note{ margin-top:24px; opacity:.85; }
+
+    footer{ border-top:1px solid var(--line); padding-block:24px; padding-inline:var(--container-pad);
+      display:flex; justify-content:space-between; align-items:center; gap:16px; color:#555; font-size:var(--fs-caption); }
+    footer .sns{ display:flex; gap:16px; }
